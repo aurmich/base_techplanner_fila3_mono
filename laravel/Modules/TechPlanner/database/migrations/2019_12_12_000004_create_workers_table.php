@@ -65,9 +65,9 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('longitude')) {
                     $table->decimal('longitude', 11, 8)->nullable();
                 }
-                if (! $this->hasColumn('updated_at')) {
-                    $table->timestamps();
-                }
+                // if (! $this->hasColumn('updated_at')) {
+                //     $table->timestamps();
+                // }
                 if (! $this->hasColumn('updated_by')) {
                     $table->string('updated_by')->nullable()->after('updated_at');
                 }

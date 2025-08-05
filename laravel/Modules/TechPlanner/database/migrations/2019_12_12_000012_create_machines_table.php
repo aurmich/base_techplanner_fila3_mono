@@ -42,10 +42,10 @@ return new class() extends XotBaseMigration {
                 //if ($table->hasForeignKey('machines', 'machines_client_id_foreign')) {
                 //    $table->dropForeign('machines_client_id_foreign');
                 //}
-                $table->integer('client_id')
+                $table->unsignedBigInteger('client_id')
                         ->nullable()
                         ->change();
-                $table->integer('appointment_id')
+                $table->unsignedBigInteger('appointment_id')
                         ->nullable()
                         ->change();
                 if ($this->hasColumn('status')) {
