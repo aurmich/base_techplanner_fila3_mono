@@ -1572,6 +1572,7 @@ trait HasPassportConfiguration
 # Changelog
 
 ## [1.0.0] - 2024-03-20
+
 ### Added
 - Implementazione iniziale dei trait di configurazione
 - Supporto per Passport e Socialite
@@ -1646,6 +1647,7 @@ trait HasPassportConfiguration
 ### Versione Incoming
 
 // ... existing code ...
+
 ## Collegamenti tra versioni di passport.md
 * [passport.md](../../Tenant/docs/it/config/passport.md)
 

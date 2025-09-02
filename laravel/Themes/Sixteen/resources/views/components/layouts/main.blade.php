@@ -33,6 +33,7 @@
         @livewire('notifications')
 		@filamentScripts
         @vite(['resources/js/app.js'], 'themes/Sixteen')
+
         <link rel="stylesheet" type="text/css" href="{{asset("vendor/cookie-consent/css/cookie-consent.css")}}">
     </body>
 </html>

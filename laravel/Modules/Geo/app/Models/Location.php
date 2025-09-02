@@ -57,10 +57,12 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Location whereStreet($value)
  * @method static Builder<static>|Location whereUpdatedAt($value)
  * @method static Builder<static>|Location whereUpdatedBy($value)
+ * @mixin IdeHelperLocation
  * @mixin \Eloquent
  */
 class Location extends BaseModel
 {
+    
     protected $fillable = [
         'name',
         'lat',

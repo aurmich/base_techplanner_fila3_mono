@@ -28,6 +28,11 @@
             }
         }
     },
+    "require": {
+        "filament/filament": "^3.4",
+        "filament/tables": "^3.4",
+        "filament/forms": "^3.4"
+    },
     "autoload": {
         "psr-4": {
             "Themes\\Sixteen\\": ""

@@ -1,6 +1,6 @@
-# Tema One – Tema Frontend Moderno e Riusabile
+# Tema One - Tema Frontend Moderno
 
-## Introduzione
+## 📋 Panoramica
 
 Tema One è un tema frontend moderno e altamente personalizzabile basato su:
 - Laravel 10+
@@ -8,8 +8,6 @@ Tema One è un tema frontend moderno e altamente personalizzabile basato su:
 - Volt (per la gestione delle viste)
 - Folio (per il routing)
 - Laraxot (per l'estensibilità)
-
-Può essere utilizzato sia come tema generico per progetti multipli, sia come tema predefinito per istanze specifiche come il progetto.
 
 ## 🎯 Caratteristiche Principali
 
@@ -20,8 +18,6 @@ Può essere utilizzato sia come tema generico per progetti multipli, sia come te
 - Ottimizzato per SEO
 - Performance ottimizzata
 - Facile personalizzazione
-
-> Consulta la documentazione dettagliata nella [cartella docs](docs/) del modulo e nella cartella docs principale del progetto per best practices, installazione, roadmap e altro.
 
 ## 📊 Roadmap
 
@@ -37,12 +33,12 @@ Per la roadmap completa e lo stato di sviluppo, consulta [docs/roadmap.md](docs/
 
 ## 🚀 Installazione
 
-1. Aggiungi il tema al tuo `composer.json` (adatta il nome del pacchetto se usato in progetti diversi):
+1. Aggiungi il tema al tuo `composer.json`:
 
 ```json
 {
     "require": {
-        "saluteora/theme-one": "^1.0"
+        "base_predict_fila3_mono/theme-one": "^1.0"
     }
 }
 ```
@@ -61,12 +57,6 @@ php artisan vendor:publish --tag=theme-one-views
 php artisan vendor:publish --tag=theme-one-config
 ```
 
-3. **IMPORTANTE:** Con Filament 3.x è OBBLIGATORIO usare solo le seguenti dipendenze (come da [Filament Docs](https://filamentphp.com/docs/3.x/notifications/installation#installing-tailwind-css)):
-  ```sh
-  npm install tailwindcss@3 @tailwindcss/forms @tailwindcss/typography postcss postcss-nesting autoprefixer --save-dev
-  npm run build
-  ```
-
 4. Installa le dipendenze NPM:
 
 ```bash
@@ -83,7 +73,8 @@ npm run build
 
 ### Tailwind CSS
 
-Il tema utilizza Tailwind CSS per lo styling. Assicurati che i seguenti file siano configurati correttamente:
+Il tema utilizza Tailwind CSS per lo styling. Configura i seguenti file:
+
 1. `postcss.config.js`:
 
 ```js
@@ -103,7 +94,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
     content: [
         './resources/views/**/*.blade.php',
-        './vendor/saluteora/theme-one/resources/views/**/*.blade.php',
+        './vendor/base_predict_fila3_mono/theme-one/resources/views/**/*.blade.php',
     ],
     theme: {
         extend: {
@@ -251,24 +242,3 @@ Per la documentazione completa, consulta:
 ## 📝 Licenza
 
 Questo tema è open-source sotto la licenza MIT. Vedi il file `LICENSE` per maggiori dettagli.
-
-## Integrazione con Laravel Folio
-
-Il tema utilizza Laravel Folio per la gestione delle rotte frontend. Vedi la documentazione in `docs/folio.md` per maggiori dettagli.
-
-## Integrazione con il CMS
-
-Il tema si integra con il modulo CMS per la gestione dei contenuti. I blocchi di contenuto sono gestiti attraverso il modello `Page` del modulo CMS.
-
-## Compatibilità
-
-Assicurati che i nomi dei parametri nel database corrispondano a quelli attesi dai componenti. In particolare:
-
-- Il blocco `feature_sections` utilizza il parametro `sections` invece di `features`
-- Il blocco `stats` utilizza il parametro `number` invece di `value` per i valori delle statistiche
-
-## Supporto
-
-Per assistenza tecnica, contattare:
-- Email: support@saluteora.com
-- Documentazione: https://docs.saluteora.com

@@ -1,6 +1,6 @@
 {
-    "name": "saluteora/theme-one",
-    "description": "Tema One per SaluteOra",
+    "name": "<nome progetto>/theme-one",
+    "description": "Tema One per <nome progetto>",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -16,9 +16,7 @@
         }
     },
     "require": {
-        "filament/filament": "^3.3",
-        "filament/tables": "^3.3",
-        "filament/forms": "^3.3"
-    },
-    "minimum-stability": "dev"
+        "filament/filament": "*",
+        "filament/tables": "*"
+    }
 }

@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Geo\Contracts\HasGeolocation;
-use Modules\Geo\Database\Factories\PlaceFactory;
 
 use function Safe\json_encode;
 
@@ -22,7 +20,6 @@ use function Safe\json_encode;
  * @property-read \Illuminate\Database\Eloquent\Model $linked
  * @property-read \Modules\Geo\Models\PlaceType|null $placeType
  * @property-read \Modules\User\Models\Profile|null $updater
- * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place query()
@@ -50,6 +47,7 @@ use function Safe\json_encode;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place wherePostType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Place whereUpdatedBy($value)
+ * @mixin IdeHelperPlace
  * @mixin \Eloquent
  */
 class Place extends BaseModel implements HasGeolocation
@@ -71,9 +69,10 @@ class Place extends BaseModel implements HasGeolocation
         'route',
         'postal_code',
         'point_of_interest',
-        'political'
+        'political',
     ];
-    use HasFactory;
+
+
 
     protected $fillable = [
         'id', 'post_id', 'post_type', 'model_id', 'model_type',
@@ -101,9 +100,7 @@ class Place extends BaseModel implements HasGeolocation
     }
 
     /**
-     * @return MorphTo<Model, self>
-     *
-     * @phpstan-ignore-next-line
+     * Get the linked model.
      */
     public function linked(): MorphTo
     {
@@ -111,9 +108,7 @@ class Place extends BaseModel implements HasGeolocation
     }
 
     /**
-     * @return BelongsTo<PlaceType, self>
-     *
-     * @phpstan-ignore-next-line
+     * Get the place type.
      */
     public function placeType(): BelongsTo
     {
@@ -121,9 +116,7 @@ class Place extends BaseModel implements HasGeolocation
     }
 
     /**
-     * @return BelongsTo<Address, self>
-     *
-     * @phpstan-ignore-next-line
+     * Get the address.
      */
     public function address(): BelongsTo
     {
@@ -186,8 +179,8 @@ class Place extends BaseModel implements HasGeolocation
 
     public function hasValidCoordinates(): bool
     {
-        return null !== $this->latitude
-            && null !== $this->longitude
+        return $this->latitude !== null
+            && $this->longitude !== null
             && $this->latitude >= -90
             && $this->latitude <= 90
             && $this->longitude >= -180
@@ -221,8 +214,4 @@ class Place extends BaseModel implements HasGeolocation
         return $this->placeType->name ?? null;
     }
 
-    protected static function newFactory(): PlaceFactory
-    {
-        return PlaceFactory::new();
-    }
 }

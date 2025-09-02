@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 use Modules\Cms\Models\Page;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
@@ -38,26 +38,20 @@ render(function (View $view, string $slug) {
                 </h1>
             </div>
 
-            {{-- {{ dddx([
-                $_theme->showPageSidebarContent($page->title),
-                $_theme->showPageContent($page->title),
-                $page->sidebar_blocks,
-                $page->content_blocks
-                ]) }} --}}
-            {{-- {{ dddx($page->content_blocks) }} --}}
+           
             @if(!empty($page->sidebar_blocks))
                 <div class="grid grid-cols-1 lg:grid-cols-[21.25rem,1fr] gap-4">
                     <div class="space-y-6">
-                        {{ $_theme->showPageSidebarContent($page->slug) }}
+                        <x-page side="sidebar" :slug="$page->slug" />
                     </div>
 
-                    {{ $_theme->showPageContent($page->slug) }}
+                    <x-page side="content" :slug="$page->slug" />
                 </div>
 
             @else
                 {{-- what is the css to make the whole block unsplit? --}}
                 <div>
-                    {{ $_theme->showPageContent($page->slug) }}
+                    <x-page side="content" :slug="$page->slug" />
                 </div>
             @endif
         @else

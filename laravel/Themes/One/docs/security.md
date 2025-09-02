@@ -222,9 +222,3 @@ export const validateInput = (input, pattern) => {
 - [Componenti](../components.md)
 - [Guida allo Stile](../style_guide.md)
 - [Best Practices](../best_practices.md) 
-
-## Collegamenti tra versioni di security.md
-* [security.md](laravel/Modules/Gdpr/docs/packages/security.md)
-* [security.md](laravel/Modules/Cms/docs/frontoffice/security.md)
-* [security.md](laravel/Themes/One/docs/security.md)
-

@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent;
+use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent as SpatieStoredEvent;
 
 /**
  * Class StoredEvent.
@@ -45,10 +48,16 @@ use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent;
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent wherePropertyIsNot(string $property, ?mixed $value)
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent whereUpdatedBy($value)
  * @method static \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<static>|StoredEvent withMetaDataAttributes()
+ * @mixin IdeHelperStoredEvent
  * @mixin \Eloquent
  */
-class StoredEvent extends EloquentStoredEvent
+class StoredEvent extends SpatieStoredEvent
 {
+    use HasFactory;
+    
+    /** @var string */
+    protected $connection = 'activity';
+    /** @var string */
     protected $table = 'stored_events';
 
     /** @var list<string> */
@@ -65,6 +74,4 @@ class StoredEvent extends EloquentStoredEvent
         'created_by',
     ];
 
-    /** @var string */
-    protected $connection = 'activity';
 }

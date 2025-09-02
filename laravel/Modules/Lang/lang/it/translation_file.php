@@ -5,40 +5,49 @@ return array (
   array (
     'create' => 
     array (
-      'label' => 'create',
+      'label' => 'Crea',
+      'tooltip' => 'Crea nuovo file di traduzione',
+      'success' => 'File di traduzione creato con successo',
     ),
     'lang' => 
     array (
-      'label' => 'lang',
+      'label' => 'Lingua',
+      'tooltip' => 'Seleziona lingua',
     ),
   ),
   'fields' => 
   array (
     'edit' => 
     array (
-      'label' => 'edit',
+      'label' => 'Modifica',
+      'tooltip' => 'Modifica file di traduzione',
     ),
     'toggleColumns' => 
     array (
-      'label' => 'toggleColumns',
+      'label' => 'Mostra/Nascondi Colonne',
+      'tooltip' => 'Mostra o nascondi colonne della tabella',
     ),
     'reorderRecords' => 
     array (
-      'label' => 'reorderRecords',
+      'label' => 'Riordina Record',
+      'tooltip' => 'Riordina i record nella tabella',
     ),
     'resetFilters' => 
     array (
-      'label' => 'resetFilters',
+      'label' => 'Reset Filtri',
+      'tooltip' => 'Ripristina i filtri ai valori predefiniti',
     ),
     'content' => 
     array (
-      'description' => 'content',
-      'helper_text' => 'content',
-      'placeholder' => 'content',
+      'description' => 'Contenuto del file di traduzione',
+      'helper_text' => '',
+      'placeholder' => 'Inserisci contenuto traduzione',
+      'label' => 'Contenuto',
     ),
     'applyFilters' => 
     array (
-      'label' => 'applyFilters',
+      'label' => 'Applica Filtri',
+      'tooltip' => 'Applica i filtri selezionati',
     ),
     'snapshots' => 
     array (
@@ -48,38 +57,48 @@ return array (
         array (
           'help' => 
           array (
-            'description' => 'snapshots.fields.updated_at.help',
-            'helper_text' => 'snapshots.fields.updated_at.help',
-            'placeholder' => 'snapshots.fields.updated_at.help',
-            'label' => 'snapshots.fields.updated_at.help',
+            'description' => 'Data e ora dell\'ultimo aggiornamento',
+            'helper_text' => '',
+            'placeholder' => 'Data aggiornamento',
+            'label' => 'Data Aggiornamento',
           ),
           'label' => 
           array (
-            'description' => 'snapshots.fields.updated_at.label',
-            'helper_text' => 'snapshots.fields.updated_at.label',
-            'placeholder' => 'snapshots.fields.updated_at.label',
+            'description' => 'Etichetta per la data di aggiornamento',
+            'helper_text' => '',
+            'placeholder' => 'Etichetta data',
+            'label' => 'Etichetta Data',
           ),
         ),
       ),
     ),
     'openFilters' => 
     array (
-      'label' => 'openFilters',
+      'label' => 'Apri Filtri',
+      'tooltip' => 'Apri il pannello dei filtri',
     ),
     'key' => 
     array (
-      'label' => 'key',
+      'label' => 'Chiave',
+      'placeholder' => 'Inserisci chiave traduzione',
+      'help' => 'Chiave identificativa della traduzione',
+    ),
+    'delete' => 
+    array (
+      'label' => 'delete',
     ),
   ),
   'navigation' => 
   array (
-    'label' => 'translation file.navigation',
+    'label' => 'File Traduzione',
+    'group' => 'Lang',
+    'icon' => 'heroicon-o-language',
     'sort' => 73,
-    'icon' => 'translation file.navigation',
-    'group' => 'translation file.navigation',
   ),
   'model' => 
   array (
-    'label' => 'translation file.model',
+    'label' => 'File Traduzione',
+    'placeholder' => 'Seleziona file traduzione',
+    'helper_text' => 'File di traduzione per la gestione delle lingue',
   ),
 );
