@@ -26,9 +26,7 @@ new class extends Component
 ?>
 
 <x-layouts.app>
-    @volt('home')
     <div>
-        <x-page side="content" slug="home" />
+        <x-page side="content" slug="techplanner" />
     </div>
-    @endvolt
 </x-layouts.app>

@@ -1,0 +1,87 @@
+{
+    "id": "1",
+    "title": {
+      "it": "home"
+    },
+    "slug": "techplanner",
+    "content": null,
+    "content_blocks": [
+      {
+        "type": "widget",
+        "name": "hero_banner",
+        "data": {
+          "view": "pub_theme::components.blocks.hero_banner",
+          "title": "SICUREZZA E RADIOPROTEZIONE",
+          "subtitle": "PER LA TUA STRUTTURA",
+          "background_image": "/themes/sixteen/assets/images/hero-radioprotezione.jpg",
+          "cta_text": "Contattaci",
+          "cta_link": "/contatti"
+        }
+      },
+      {
+        "type": "widget",
+        "name": "about_us",
+        "data": {
+          "view": "pub_theme::components.blocks.about_us",
+          "title": "Chi siamo",
+          "content": "Offriamo consulenza e servizi tecnici per garantire conformità, sicurezza e affidabilità nell’utilizzo di apparecchi radiologici ed elettromedicali, a supporto di strutture sanitarie e studi veterinari."
+        }
+      },
+      {
+        "type": "widget",
+        "name": "mission",
+        "data": {
+          "view": "pub_theme::components.blocks.mission",
+          "title": "La nostra missione",
+          "subtitle": "Qualità e Affidabilità",
+          "content": "Supportare le strutture sanitarie e i professionisti con un servizio completo di consulenza tecnica e normativa, garantendo sicurezza, conformità e serenità operativa."
+        }
+      },
+      {
+        "type": "widget",
+        "name": "services",
+        "data": {
+          "view": "pub_theme::components.blocks.services",
+          "title": "I nostri servizi",
+          "items": [
+            {
+              "title": "Controllo apparecchi RX",
+              "description": "Verifiche periodiche sugli apparecchi radiografici installati e comunicazioni preventive agli enti competenti."
+            },
+            {
+              "title": "Nuove installazioni e sostituzioni",
+              "description": "Prima verifica e rilascio del benestare all’uso per apparecchiature nuove o sostituite."
+            },
+            {
+              "title": "Documentazione tecnica",
+              "description": "Redazione della documentazione necessaria in caso di ristrutturazioni, cambi di ragione sociale o chiusura della struttura."
+            },
+            {
+              "title": "Modulistica e cartellonistica",
+              "description": "Fornitura di tutta la modulistica e della segnaletica obbligatoria per la sicurezza."
+            }
+          ]
+        }
+      }
+    ],
+    "sidebar_blocks": null,
+    "footer_blocks": [
+      {
+        "type": "widget",
+        "name": "contacts",
+        "settings": {
+          "company": "Sottana Service",
+          "phone": "041-455552",
+          "email": "studio@sottana.com",
+          "address": "Via Vanzo 86, 31021 Mogliano Veneto (TV)",
+          "cta_text": "Scrivici",
+          "cta_link": "mailto:studio@sottana.com"
+        }
+      }
+    ],
+    "created_at": "2025-07-08T09:02:57.000000Z",
+    "updated_at": "2025-07-08T09:02:57.000000Z",
+    "created_by": null,
+    "updated_by": null
+  }
+  
